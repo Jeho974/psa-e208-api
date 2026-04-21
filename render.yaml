@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: psa-e208-api
+    runtime: docker
+    env: docker
+    plan: free
+    disk:
+      name: config
+      mountPath: /config
+      sizeGB: 1
