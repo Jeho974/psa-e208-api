@@ -1,5 +1,7 @@
-FROM flobz/psa_car_controller:latest
+FROM flobz/psa_car_controller
+
+ENV PSA_CONFIG_DIR=/app/config
+
+RUN mkdir -p /app/config
+
 EXPOSE 5000
-ENV PSA_CONFIG_DIR=/config
-VOLUME ["/config"]
-CMD ["python", "-m", "psa_car_controller", "-f", "/config"]
